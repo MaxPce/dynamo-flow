@@ -5,7 +5,6 @@ import logging
 # libreria para logs
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 
-# Clase abstracta para operaciones.
 class Operation(ABC):
     
 
@@ -16,7 +15,6 @@ class Operation(ABC):
     def apply(self, dato: Dict[str, Any]) -> Dict[str, Any]: 
         pass
 
-# Convierte un campo de texto a float.
 class NormalizeAmountOperation(Operation):
 
     def apply(self, fila: Dict[str, Any]) -> Dict[str, Any]:
@@ -42,7 +40,6 @@ class NormalizeAmountOperation(Operation):
 
         return fila
 
-# Chequea que un campo exista y no esté vacío.
 class ContextualFieldValidation(Operation):
     
     
@@ -134,3 +131,4 @@ if __name__ == "__main__":
     print("Procesados:", resultado["procesados"])
     print("Válidos:", resultado["validos"])
     print("Inválidos:", resultado["invalidos"])
+
