@@ -1,6 +1,6 @@
 # Dynamo-flow - Justificación
 
-Se optó por un enfoque orientado a objetos para que todas las operaciones sigan una misma estructura.
+La clase abstracta Operation se implementó como pedían en el enunciado. Esto permite que todas las operaciones sigan una misma estructura y se puedan extender  sin modificar el resto del código.
 
 La operación NormalizeAmountOperation se diseñó para ser flexible: puede aplicarse sobre un campo numérico, no solo amount o price. Se encarga de limpiar símbolos de moneda, aceptar tanto coma como punto, y convertir el valor a float. Si el campo no existe o no se puede convertir se deja en None y se registra una advertencia para no interrumpir el flujo.
 
